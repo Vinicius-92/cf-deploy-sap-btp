@@ -4,22 +4,22 @@ branding:
   icon: "upload-cloud"
   color: "red"
 inputs:
-  mtafile:
+  MTAR_PATH:
     description: Path to your MTA file.
     required: true
-  api:
+  API:
     description: Cloud Foundry API endpoint.
     required: true
-  username:
+  USER:
     description: Cloud Foundry username.
     required: true
-  password:
+  PASSWORD:
     description: Cloud Foundry password.
     required: true
-  org:
+  ORG:
     description: Cloud Foundry organization.
     required: true
-  space:
+  SPACE:
     description: Cloud Foundry space to deploy to.
     required: true
 
