@@ -28,7 +28,7 @@ To use this action, add the following steps to your .github/workflows YAML file:
 ```yaml
 steps:
 - name: CF Deploy SAP BTP
-  uses: Vinicius-92/cf-deploy-sap-btp
+  uses: Vinicius-92/cf-deploy-sap-btp@v1
   with:
     MTAR_PATH: 'path/file.mtar'
     API: ${{ secrets.CF_API }}
