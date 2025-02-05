@@ -1,0 +1,28 @@
+name: "CF Deploy SAP BTP"
+description: Deploy an .mtar file built for SAP BTP using Cloud Foundry CLI.
+branding:
+  icon: "upload-cloud"
+  color: "red"
+inputs:
+  mtafile:
+    description: Path to your MTA file.
+    required: true
+  api:
+    description: Cloud Foundry API endpoint.
+    required: true
+  username:
+    description: Cloud Foundry username.
+    required: true
+  password:
+    description: Cloud Foundry password.
+    required: true
+  org:
+    description: Cloud Foundry organization.
+    required: true
+  space:
+    description: Cloud Foundry space to deploy to.
+    required: true
+
+runs:
+  using: docker
+  image: Dockerfile
