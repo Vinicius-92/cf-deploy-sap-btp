@@ -1,6 +1,11 @@
-FROM ppiper/cf-cli:latest
+FROM ubuntu:18.04
 
-ENV CF_HOME=$HOME
-COPY entrypoint.sh /entrypoint.sh
+RUN apt-get update
+RUN apt-get install -y ca-certificates jq
 
+RUN echo "deb [trusted=yes] https://packages.cloudfoundry.org/debian stable main" > /etc/apt/sources.list.d/cloudfoundry-cli.list
+RUN apt-get update
+RUN apt-get install -y cf7-cli
+
+ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
